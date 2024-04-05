@@ -34,14 +34,16 @@ onMounted(() => {
   <div>
     <img alt="Asem logo" class="logo" src="../public/favicon.png" />
     <div class="main" dir="ltr">
-      <div class="task-input">
-        <input
-          type="text"
-          class="task-text"
-          v-model="taskText"
-          placeholder="type a task"
-        />
-        <button class="add-task" @click="addTask">Add Task</button>
+      <div>
+        <form class="task-input" @submit.prevent="addTask">
+          <input
+            type="text"
+            class="task-text"
+            v-model="taskText"
+            placeholder="type a task"
+          />
+          <button class="add-task" type="submit">Add Task</button>
+        </form>
       </div>
       <div class="todo-list">
         <ul>
