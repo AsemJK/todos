@@ -31,28 +31,31 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="main" dir="ltr">
-    <div class="task-input">
-      <input
-        type="text"
-        class="task-text"
-        v-model="taskText"
-        placeholder="type a task"
-      />
-      <button class="add-task" @click="addTask">Add Task</button>
-    </div>
-    <div class="todo-list">
-      <ul>
-        <li v-for="(task, index) in todoList" :key="index">
-          <div style="width: 100%" class="list-template">
-            <span>
-              {{ index + 1 }}.
-              {{ task }}
-            </span>
-            <a href="#" @click="deleteTask" class="delete-btn"><i>x</i></a>
-          </div>
-        </li>
-      </ul>
+  <div>
+    <img alt="Asem logo" class="logo" src="../public/favicon.png" />
+    <div class="main" dir="ltr">
+      <div class="task-input">
+        <input
+          type="text"
+          class="task-text"
+          v-model="taskText"
+          placeholder="type a task"
+        />
+        <button class="add-task" @click="addTask">Add Task</button>
+      </div>
+      <div class="todo-list">
+        <ul>
+          <li v-for="(task, index) in todoList" :key="index">
+            <div style="width: 100%" class="list-template">
+              <span>
+                {{ index + 1 }}.
+                {{ task }}
+              </span>
+              <a href="#" @click="deleteTask" class="delete-btn"><i>x</i></a>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </template>
