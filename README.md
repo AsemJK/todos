@@ -8,5 +8,4 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 
 ## Screenshot
 
-![Screenshot for simple todo list app by Asem]
-[(/public/shot.png "AsemJKA")](https://asemalsaiyadi.onrender.com)
+[![Screenshot for simple todo list app by Asem](/public/shot.png "AsemJKA")](https://asemalsaiyadi.onrender.com)
