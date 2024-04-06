@@ -31,7 +31,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div>
+  <div class="app-container">
     <img alt="Asem logo" class="logo" src="../public/favicon.png" />
     <div class="main" dir="ltr">
       <div class="task-input">
@@ -63,6 +63,10 @@ onMounted(() => {
 </template>
 
 <style scoped>
+.app-container {
+  display: grid;
+  place-items: center;
+}
 .main {
   display: grid;
   place-items: center;
@@ -72,6 +76,7 @@ onMounted(() => {
   width: 60vw;
   background-color: #282c34;
   border: #282c34;
+  border-radius: 5px;
   box-shadow: 0 0 1px 3px #282c34;
 }
 .task-input {
@@ -146,8 +151,8 @@ onMounted(() => {
   grid-column: 1 / 3;
 }
 .logo {
-  height: 6em;
-  padding: 1.5em;
+  height: 10em;
+  padding: 0.5em;
   will-change: filter;
   transition: filter 300ms;
 }
