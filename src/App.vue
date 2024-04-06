@@ -119,7 +119,9 @@ onMounted(() => {
 }
 .todo-list ul li {
   padding: 0.4em;
-  margin: 0.8em;
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+  margin-inline: 0.6em;
   background-color: #646cff;
   border-radius: 0.5em;
   box-shadow: 0 0 0.1em 0.5rem #646cff;
