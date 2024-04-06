@@ -135,6 +135,12 @@ onMounted(() => {
 .delete-btn {
   color: red;
   font-size: 1.9em;
+  grid-row: 1 / 3;
+  grid-column: 3 / 4;
+  justify-self: end;
+  align-self: center;
+  margin-inline: 1em;
+  padding: 0.5em;
 }
 .list-template {
   display: grid;
@@ -149,6 +155,7 @@ onMounted(() => {
 }
 .list-template span {
   grid-column: 1 / 3;
+  grid-row: 1 / 3;
 }
 .logo {
   height: 10em;
