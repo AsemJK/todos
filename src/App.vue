@@ -53,7 +53,7 @@ onMounted(() => {
                 {{ index + 1 }}.
                 {{ task }}
               </span>
-              <a href="#" @click="deleteTask" class="delete-btn"><i>x</i></a>
+              <a href="#" @click="deleteTask" class="delete-btn"><i>❌</i></a>
             </div>
           </li>
         </ul>
