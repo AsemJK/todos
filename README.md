@@ -12,4 +12,4 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 
 ## Demo
 
-[Demo](https://delightful-cliff-0feab720f.5.azurestaticapps.net)
+[Demo](https://main.d2o5gwpmpnrkla.amplifyapp.com)
