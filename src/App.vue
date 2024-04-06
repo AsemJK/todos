@@ -34,15 +34,15 @@ onMounted(() => {
   <div>
     <img alt="Asem logo" class="logo" src="../public/favicon.png" />
     <div class="main" dir="ltr">
-      <div>
-        <form class="task-input" @submit.prevent="addTask">
+      <div class="task-input">
+        <form @submit.prevent="addTask">
           <input
             type="text"
             class="task-text"
             v-model="taskText"
             placeholder="type a task"
           />
-          <button class="add-task" type="submit">Add Task</button>
+          <button class="add-task-btn" type="submit">Add Task</button>
         </form>
       </div>
       <div class="todo-list">
@@ -72,12 +72,18 @@ onMounted(() => {
   width: 60vw;
   background-color: #282c34;
   border: #282c34;
-  box-shadow: 0 0 10px 5px #282c34;
+  box-shadow: 0 0 1px 3px #282c34;
 }
 .task-input {
   width: 100%;
+}
+.task-input form {
+  width: 100%;
   padding: 1rem;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
 }
 .task-text {
   width: 100%;
@@ -85,21 +91,21 @@ onMounted(() => {
   font-size: 0.6em;
   border: none;
   border-radius: 0.5em;
-  box-shadow: 0 0 1em 0.5em #646cff;
+  box-shadow: 0 0 0.1em 0.5em #646cff;
   transition: box-shadow 300ms;
   float: left;
-  padding-inline: 1em;
+  padding: 0.5em;
 }
-.add-task {
+.add-task-btn {
   float: left;
-  padding: 1em;
+  padding: 0.5em;
   margin-inline: 3rem;
   border: none;
   border-radius: 0.5em;
   background-color: #646cff;
   color: white;
-  font-size: 0.7em;
-  box-shadow: 0 0 1.1rem 0.08em #646cff;
+  font-size: 0.6em;
+  box-shadow: 0 0 0.1em 0.08em #646cff;
   transition: box-shadow 300ms;
 }
 .todo-list {
@@ -112,11 +118,11 @@ onMounted(() => {
   display: inline;
 }
 .todo-list ul li {
-  padding: 1em;
-  margin: 1em;
+  padding: 0.4em;
+  margin: 0.4em;
   background-color: #646cff;
   border-radius: 0.5em;
-  box-shadow: 0 0 1em 0.5rem #646cff;
+  box-shadow: 0 0 0.1em 0.5rem #646cff;
   transition: box-shadow 300ms;
 }
 .delete-btn {
