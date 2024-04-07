@@ -17,6 +17,7 @@ const addTask = () => {
 const deleteTask = (index) => {
   todoList.value.splice(index, 1);
   localStorage.setItem("todoList", JSON.stringify(todoList.value));
+  loadTasks();
 };
 
 const loadTasks = () => {
@@ -42,7 +43,10 @@ onMounted(() => {
             v-model="taskText"
             placeholder="type a task"
           />
-          <button class="add-task-btn" type="submit">Add Task</button>
+          <button class="add-task-btn" type="submit" style="color: white">
+            Add Task
+            <span>➕</span>
+          </button>
         </form>
       </div>
       <div class="todo-list">
@@ -53,7 +57,9 @@ onMounted(() => {
                 {{ index + 1 }}.
                 {{ task }}
               </span>
-              <a href="#" @click="deleteTask" class="delete-btn"><i>❌</i></a>
+              <a href="#" @click="deleteTask(index)" class="delete-btn"
+                ><i>❌</i></a
+              >
             </div>
           </li>
         </ul>
